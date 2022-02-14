@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="index.css" rel="stylesheet">
+    <link href="css/calculeimc.css" rel="stylesheet">
     <script type="module" src="index.js" defer></script>
     <title>Login</title>
 </head>
 <body>
+    <main>
+        <div id="container">
+            <div id="title">Calcule seu IMC</div>
+            <div class="input-label">
+                <label>Peso</label>
+                <label id="output1">1</label>
+            </div>
+                
+            <div class="slidecontainer">
+                    <input type="range" min="1" max="150" value="1" oninput="output1.innerHTML=value" class="slider" id="peso-p">
+            </div>
+            <div class="input-label">
+                <label>Altura</label>
+                <label id="output2">1</label>
+            </div>
+                
+            <div class="slidecontainer">
+                    <input type="range" min="1" max="150" value="1" oninput="output2.innerHTML=value" class="slider" id="altura-a">
+            </div>
+            <button id="calcular">Calcular</button>
+
+            <p id="resultado">resultado</p>
+        </div>
+
+    </main>
+    
     
 </body>
 </html>
